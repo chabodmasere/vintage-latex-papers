@@ -1,4 +1,4 @@
-# Vintage scientific papers with LaTeX
+# Vintage scientific papers with LuaLaTeX
 
 Twenty small examples show independent mechanisms behind a convincing
 old-scientific-paper aesthetic. Each file is deliberately standalone: copy one,
@@ -8,6 +8,19 @@ The examples fall into three groups: pure LaTeX pages (1, 2, 4, 5, 6, 10 to
 14), standalone [fiziko](https://github.com/jemmybutton/fiziko) MetaPost
 figures (3, 7, 8, 9), and LaTeX pages with fiziko figures drawn inside them by
 LuaTeX's built-in MetaPost (15 to 20).
+
+## Compiler
+
+**These files must be compiled with LuaLaTeX, not the default pdfLaTeX.** They
+rely on OpenType fonts through `fontspec`, on Lua code run at compile time, and
+on LuaTeX's built-in MetaPost. Every `.tex` file checks the engine and stops
+with an error under pdfLaTeX or XeLaTeX.
+
+- **Overleaf:** open Menu, then under Settings set **Compiler** to **LuaLaTeX**.
+- **Command line:** run `lualatex`, as shown under [Build](#build).
+
+The four `.mp` files in `examples/` (3, 7, 8 and 9) are MetaPost sources and
+are compiled with `mpost` instead.
 
 ## Gallery
 
